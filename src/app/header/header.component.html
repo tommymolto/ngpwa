@@ -1,11 +1,11 @@
 <div>
   <mat-toolbar>
   <span>Carrefour</span>
-    <span (click)="installPwa()">
-      Install
+    <span *ngIf="Pwa.promptEvent" (click)="installPwa()">
+      Instalar via snack
     </span>
-    <span  (click)="instalarPWA()">
-      Instalar
+    <span  *ngIf="Pwa.promptEvent" (click)="instalarPWA()">
+      Instalar via confirm
     </span>
 
   </mat-toolbar>

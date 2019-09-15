@@ -10,22 +10,18 @@ export class PwaServiceService {
 
   installApp(): void {
     console.log('installApp');
-    this.swUpdate.activateUpdate().then(x=> {
-      console.log('nao quis');
-
-    })
-      this.swUpdate.available.subscribe(event => {
-        if (this.askUserToUpdate()) {
+    this.swUpdate.available.subscribe(event => {
+        //if (this.askUserToUpdate()) {
           window.location.reload();
-        }else{
-          console.log('nao quis');
-        }
+        //}else{
+        //  console.log('nao quis');
+        //}
       }, error => {
         console.log(error);
       });
-      /*window.addEventListener('beforeinstallprompt', event => {
+      window.addEventListener('beforeinstallprompt', event => {
         this.promptEvent = event;
-      });*/
+      });
     }
   instalaApp(){
     this.swUpdate.available.subscribe(event => {
@@ -33,6 +29,6 @@ export class PwaServiceService {
     });
   }
   askUserToUpdate(): boolean{
-    return confirm('Atualizar?');
+    return window.confirm('Atualizar?');
   }
 }
