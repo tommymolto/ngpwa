@@ -13,19 +13,19 @@ import {PwaServiceService} from '../pwa-service.service';
 export class HeaderComponent implements OnInit {
 
 
-  constructor(public Pwa: PwaServiceService, private snackBarRef: MatSnackBar) { }
+  constructor(public Pwa: PwaServiceService, private snackBarRef: MatSnackBar) {
+    this.Pwa.swUpdate.activated.subscribe( ret =>{
+      this.snackBarRef.open('Atualizar App?', 'Sim').onAction().subscribe( ret =>{
+        window.location.reload();
+      });
+    });
+  }
 
   ngOnInit() {
   }
-  instalarPWA(): void {
-    this.Pwa.installApp();
-  }
   installPwa(): void {
-    //this.Pwa.promptEvent.prompt();
     this.snackBarRef.open('Instalar App?', 'Sim').onAction().subscribe( ret =>{
-      console.log('instalado');
-      this.Pwa.instalaApp();
+      this.Pwa.promptEvent.prompt();
     });
-
   }
 }
