@@ -1,6 +1,9 @@
 <div>
   <mat-toolbar>
   <span>Carrefour</span>
+    <span (click)="installPwa()">
+      Install
+    </span>
     <span *ngIf="Pwa.promptEvent" (click)="installPwa()">
       Install
     </span>

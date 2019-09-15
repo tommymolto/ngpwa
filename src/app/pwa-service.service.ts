@@ -16,6 +16,11 @@ export class PwaServiceService {
       this.promptEvent = event;
     });
   }
+  instalaApp(){
+    this.swUpdate.available.subscribe(event => {
+        window.location.reload();
+    });
+  }
   askUserToUpdate(): boolean{
     return confirm('Atualizar?');
   }

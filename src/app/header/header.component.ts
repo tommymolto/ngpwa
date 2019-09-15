@@ -1,5 +1,7 @@
-import { Component, OnInit } from '@angular/core';
-import { MatToolbar } from '@angular/material';
+import {Component, Inject, OnInit} from '@angular/core';
+import {MatSnackBar, MatToolbar} from '@angular/material';
+import {MAT_SNACK_BAR_DATA} from '@angular/material/snack-bar';
+
 import {PwaServiceService} from '../pwa-service.service';
 @Component({
   selector: 'app-header',
@@ -10,11 +12,20 @@ import {PwaServiceService} from '../pwa-service.service';
 })
 export class HeaderComponent implements OnInit {
 
-  constructor(private Pwa: PwaServiceService) { }
+
+  constructor(public Pwa: PwaServiceService, private snackBarRef: MatSnackBar) { }
 
   ngOnInit() {
   }
-  installPwa(): void {
+  instalarPWA(): void{
     this.Pwa.promptEvent.prompt();
+  }
+  installPwa(): void {
+    //this.Pwa.promptEvent.prompt();
+    this.snackBarRef.open('Instalar App?', 'Sim').onAction().subscribe( ret =>{
+      console.log('instalado');
+      this.Pwa.instalaApp();
+    });
+
   }
 }
