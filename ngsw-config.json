@@ -1,6 +1,27 @@
 {
   "$schema": "./node_modules/@angular/service-worker/config/schema.json",
   "index": "/index.html",
+  "dataGroups": [
+    {
+      "name": "weatehr-api",
+      "urls": [
+        "https://publicdata-weather.firebaseio.com/newyork.json",
+        "https://publicdata-weather.firebaseio.com/austin.json",
+        "https://publicdata-weather.firebaseio.com/boston.json",
+        "https://publicdata-weather.firebaseio.com/chicago.json",
+        "https://publicdata-weather.firebaseio.com/portland.json"
+      ],
+      "cacheConfig": {
+        "strategy": "performance",
+        "maxSize": 10,
+        "maxAge": "1h",
+        "timeout": "5s"
+      }
+    }
+  ],
+  "strategy": "performance",
+  "maxSize": 10,
+  "maxAge": "10m",
   "assetGroups": [
     {
       "name": "app",

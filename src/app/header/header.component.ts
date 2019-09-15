@@ -17,8 +17,8 @@ export class HeaderComponent implements OnInit {
 
   ngOnInit() {
   }
-  instalarPWA(): void{
-    this.Pwa.promptEvent.prompt();
+  instalarPWA(): void {
+    this.Pwa.installApp();
   }
   installPwa(): void {
     //this.Pwa.promptEvent.prompt();

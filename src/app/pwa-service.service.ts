@@ -6,16 +6,27 @@ import { SwUpdate } from '@angular/service-worker';
 })
 export class PwaServiceService {
    promptEvent;
-  constructor(private swUpdate: SwUpdate) {
-    swUpdate.available.subscribe(event => {
-      if (this.askUserToUpdate()) {
-        window.location.reload();
-      }
-    });
-    window.addEventListener('beforeinstallprompt', event => {
-      this.promptEvent = event;
-    });
-  }
+  constructor(public swUpdate: SwUpdate) {}
+
+  installApp(): void {
+    console.log('installApp');
+    this.swUpdate.activateUpdate().then(x=> {
+      console.log('nao quis');
+
+    })
+      this.swUpdate.available.subscribe(event => {
+        if (this.askUserToUpdate()) {
+          window.location.reload();
+        }else{
+          console.log('nao quis');
+        }
+      }, error => {
+        console.log(error);
+      });
+      /*window.addEventListener('beforeinstallprompt', event => {
+        this.promptEvent = event;
+      });*/
+    }
   instalaApp(){
     this.swUpdate.available.subscribe(event => {
         window.location.reload();
