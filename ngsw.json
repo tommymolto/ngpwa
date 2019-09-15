@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1568566808115,
+  "timestamp": 1568567097102,
   "index": "/ngpwa/index.html",
   "assetGroups": [
     {
@@ -68,7 +68,7 @@
     "/ngpwa/index.html": "1354cd0a47fbe956eb518b765cc6c4b86a9c1a4a",
     "/ngpwa/main-es2015.67d254c44029cad450df.js": "b2b549a7081a19aa02ae87db29a3cfa3d1b9bf59",
     "/ngpwa/main-es5.67d254c44029cad450df.js": "76605046b0c95c19529bba0f8d209e45704d5259",
-    "/ngpwa/manifest.webmanifest": "dfbf47d46b365232042a185724216d8b95060371",
+    "/ngpwa/manifest.webmanifest": "a4eddf3e03840d5315ea6d99cd302eccc05af243",
     "/ngpwa/polyfills-es2015.0fe6949bc5ff4b784062.js": "e2f28c3743afd2899e140ad831df9675c233c02b",
     "/ngpwa/polyfills-es5.a83ac866abc867bfd530.js": "db091f7ef692a1d3add240459a2ea20c81cd6f19",
     "/ngpwa/runtime-es2015.85f895af57b038f1e5b4.js": "a9aafcf49f49145093fc831efd9b8e2f6c71bb9c",

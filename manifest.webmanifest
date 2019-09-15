@@ -1,11 +1,11 @@
 {
-  "name": "finalchallenge",
-  "short_name": "finalchallenge",
+  "name": "ngpwa",
+  "short_name": "ngpwa",
   "theme_color": "#1976d2",
   "background_color": "#fafafa",
   "display": "standalone",
-  "scope": "/",
-  "start_url": "/",
+  "scope": "/ngpwa/",
+  "start_url": "/ngpwa/",
   "icons": [
     {
       "src": "assets/icons/icon-72x72.png",
