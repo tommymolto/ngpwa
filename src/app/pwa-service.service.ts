@@ -5,7 +5,7 @@ import { SwUpdate } from '@angular/service-worker';
   providedIn: 'root'
 })
 export class PwaServiceService {
-   promptEvent;
+  promptEvent;
   constructor(public swUpdate: SwUpdate) {}
 
   installApp(): void {
@@ -20,6 +20,7 @@ export class PwaServiceService {
         console.log(error);
       });
       window.addEventListener('beforeinstallprompt', event => {
+        console.log('aqui',event);
         this.promptEvent = event;
       });
     }
