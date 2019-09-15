@@ -8,8 +8,7 @@
         "https://publicdata-weather.firebaseio.com/newyork.json",
         "https://publicdata-weather.firebaseio.com/austin.json",
         "https://publicdata-weather.firebaseio.com/boston.json",
-        "https://publicdata-weather.firebaseio.com/chicago.json",
-        "https://publicdata-weather.firebaseio.com/portland.json"
+        "https://publicdata-weather.firebaseio.com/chicago.json"
       ],
       "cacheConfig": {
         "strategy": "performance",
