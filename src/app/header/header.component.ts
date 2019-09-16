@@ -11,7 +11,7 @@ import {environment} from '../../environments/environment';
   styleUrls: ['./header.component.css'],
 })
 export class HeaderComponent implements OnInit {
-  constructor(public Pwa: PwaServiceService, private snackBarRef: MatSnackBar,swPush: SwPush) {
+  constructor(public Pwa: PwaServiceService, private snackBarRef: MatSnackBar, private swPush: SwPush) {
     this.Pwa.swUpdate.activated.subscribe( ret =>{
       this.snackBarRef.open('Atualizar App?', 'Sim').onAction().subscribe( ret =>{
         window.location.reload();
