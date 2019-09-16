@@ -10,6 +10,7 @@ import {MatToolbarModule } from '@angular/material';
 import { MiolocompassoComponent } from './miolocompasso/miolocompasso.component';
 import { SobreComponent } from './sobre/sobre.component';
 import { ContatoComponent } from './contato/contato.component';
+import {HttpClientModule} from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -24,9 +25,10 @@ import { ContatoComponent } from './contato/contato.component';
     HeaderModule,
     ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production }),
     BrowserAnimationsModule,
-    MatToolbarModule
+    MatToolbarModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [HttpClientModule],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
