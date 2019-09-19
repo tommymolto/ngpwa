@@ -12,15 +12,15 @@
       ],
       "cacheConfig": {
         "strategy": "performance",
-        "maxSize": 10,
+        "maxSize": "10",
         "maxAge": "1h",
         "timeout": "5s"
       }
     }
   ],
   "strategy": "performance",
-  "maxSize": 10,
-  "maxAge": "10m",
+  "maxSize": "10",
+  "maxAge": "10",
   "assetGroups": [
     {
       "name": "app",

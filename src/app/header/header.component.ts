@@ -13,7 +13,7 @@ import {environment} from '../../environments/environment';
 export class HeaderComponent implements OnInit {
   constructor(public Pwa: PwaServiceService, private snackBarRef: MatSnackBar, private swPush: SwPush) {
     this.Pwa.swUpdate.activated.subscribe( ret =>{
-      this.snackBarRef.open('Atualizar App?', 'Sim').onAction().subscribe( ret =>{
+      this.snackBarRef.open('Atualizar App?', 'Sim').onAction().subscribe( (reto : any) =>{
         window.location.reload();
       });
     });
